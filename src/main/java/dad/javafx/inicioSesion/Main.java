@@ -1,4 +1,4 @@
-package dad.javafx.template;
+package dad.javafx.inicioSesion;
 
 public class Main {
 
