@@ -6,6 +6,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -13,7 +14,8 @@ import javafx.scene.layout.HBox;
 public class Vista extends GridPane {
 
 	private Label lblNombre, lblContrasenia;
-	private TextField tfNombre, tfContrasenia;
+	private TextField tfNombre;
+	private PasswordField psContrasenia;
 	private Button btnAcceder, btnCancelar;
 	private Alert alPermitido, alDenegado;
 	private HBox hbBotones;
@@ -25,7 +27,7 @@ public class Vista extends GridPane {
 		lblContrasenia = new Label("Contraseña:");
 		
 		tfNombre = new TextField();
-		tfContrasenia = new TextField();
+		psContrasenia = new PasswordField();
 		
 		btnAcceder = new Button("Acceder");
 		btnAcceder.setDefaultButton(true);
@@ -51,7 +53,7 @@ public class Vista extends GridPane {
 		this.add(lblNombre, 0, 0);
 		this.add(tfNombre, 1, 0);
 		this.add(lblContrasenia, 0, 1);
-		this.add(tfContrasenia, 1, 1);
+		this.add(psContrasenia, 1, 1);
 		this.add(hbBotones, 1, 2);
 		
 		GridPane.setMargin(hbBotones, new Insets(5));
@@ -70,8 +72,8 @@ public class Vista extends GridPane {
 		return tfNombre;
 	}
 
-	public TextField getTfContrasenia() {
-		return tfContrasenia;
+	public TextField getPsContrasenia() {
+		return psContrasenia;
 	}
 
 	public Button getBtnAcceder() {
