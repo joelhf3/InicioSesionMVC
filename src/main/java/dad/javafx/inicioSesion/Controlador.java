@@ -50,12 +50,15 @@ public class Controlador {
 				if(contrasenia.equals(listContrasenia.get(i)))
 				{
 					vista.getAlPermitido().show();
+					Stage escena = (Stage) vista.getBtnAcceder().getScene().getWindow();
+					escena.close();
 					return;
 				}
 			}
 			else
 			{
 				vista.getAlDenegado().show();
+				vista.getPsContrasenia().setText("");
 				return;
 			}
 		}
